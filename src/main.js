@@ -21,8 +21,8 @@ $(document).ready(function() {
     console.log(inputName);
     let inputSpec = $('input#docSpec').val();
     let inputHelp = $('input#docHelp').val();
-    let inputSex = $('input#docSex').val();
-    let inputSort = $('input#docSort').val();
+    let inputSex = $('input:radio[name=gender]:checked').val();
+    let inputSort = $('select#docSort').val();
 
     (async function () {
       let newName = translateInput(inputName);
@@ -31,6 +31,8 @@ $(document).ready(function() {
 
     })();
 
+    console.log(inputSex);
+    console.log(inputSort);
 
     const search = new QuerySearch();
 

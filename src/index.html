@@ -8,18 +8,68 @@
     <div class="container">
       <div class="doctorSearch">
         <form id="searchDoctor">
-          <label>Doctors Name</label>
-          <input type="text" id="docName">
-          <label>Specialty</label>
-          <input type="text" id="docSpec">
-          <label>Symptoms</label>
-          <input type="text" id="docHelp">
-          <label>Gender</label>
-          <input type="text" id="docSex">
-          <label>How would you like to sort your results?</label>
-          <input type="text" id="docSort">
+          <div class="form-row">
+            <div class="form-group col-sm-6">
 
-          <button type="submit">Submit</button>
+              <label>Doctors Name</label>
+              <input type="text" id="docName">
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Specialty</label>
+              <input type="text" id="docSpec">
+              <br>
+              <label>Symptoms</label>
+              <input type="text" id="docHelp">
+            </div>
+          </div>
+          <div class="form-row allign-items-center">
+            <div class="form-group col-sm-4">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">Female
+                <input type="radio" name="gender" id="docSex" value="female">
+                </label>
+                <label class="btn btn-dark">Male
+                <input type="radio" name="gender" id="docSex" value="male">
+                </label>
+                <label class="btn btn-secondary">Either
+                <input type="radio" name="gender" id="docSex" value="" checked>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="form-group col-sm-6">
+              <label>How would you like to sort your results?</label>
+              <select class="form-control" id="docSort">
+                <option value="">    </option>
+                <option value="full-name-asc">Ascending Name</option>
+                <option value="full-name-desc">Descending Name</option>
+                <option value="best-match-asc">Best Match Ascending</option>
+                <option value="best-match-asc">Best Match Descending</option>
+                <option value="rating-asc">Doctor's Rating Ascending</option>
+                <option value="rating-asc">Doctor's Rating Descending</option>
+                <option value="distance-asc">Distance Ascending</option>
+                <option value="distance-asc">Distance Descending</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row allign-items-center">
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-4">
+              <button type="submit">Submit</button>
+
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+
+          </div>
+
+
+
         </form>
       </div>
       <div class="doctorResult">
