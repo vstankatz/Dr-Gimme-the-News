@@ -12,7 +12,7 @@ _This program was designed to allow someone to find doctors in their area, utili
 |-|-|-|
 |The Program should return an error notification if the query is unable to connect to the medical database.| "error"| Sorry, we seem to be having difficulties connecting you to your doctors.|
 |The Program should let the user know if no doctors were found to meet their search queries.| "John" "Psychologist" "Toothache" "Female"| Sorry, we were unable to find any doctors in your area that fit all your criteria.|
-|The program should take in a medical condition and show doctors in Portland that git the query. |"Psychologist"| There are 14 psychologists in your area.|
+|The program should take in a medical condition and show doctors in Portland that meet the query. |"Psychologist"| There are 14 psychologists in your area.|
 |The program should take in a name and show doctors in Portland with that name. |"John"| There are 45 doctors in your area named John.|
 |The Program should show the address of each doctor who fits the criteria.| "John"| Sacred Heart Hospital, 12629 Riverside Drive Portland, Or 97777.|
 |The Program should show the phone number of each doctor who fits the criteria.| "Dr Who"| Phone Number: 07700 900461.|

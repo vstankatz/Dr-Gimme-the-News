@@ -26,10 +26,10 @@
             <div class="form-group col-sm-4">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary">Female
-                <input type="radio" name="gender" id="docSex" value="female">
+                <input type="radio" name="gender" id="docSex" value="&gender=female">
                 </label>
                 <label class="btn btn-dark">Male
-                <input type="radio" name="gender" id="docSex" value="male">
+                <input type="radio" name="gender" id="docSex" value="&gender=male">
                 </label>
                 <label class="btn btn-secondary">Either
                 <input type="radio" name="gender" id="docSex" value="" checked>
@@ -43,14 +43,14 @@
               <label>How would you like to sort your results?</label>
               <select class="form-control" id="docSort">
                 <option value="">    </option>
-                <option value="full-name-asc">Ascending Name</option>
-                <option value="full-name-desc">Descending Name</option>
-                <option value="best-match-asc">Best Match Ascending</option>
-                <option value="best-match-asc">Best Match Descending</option>
-                <option value="rating-asc">Doctor's Rating Ascending</option>
-                <option value="rating-asc">Doctor's Rating Descending</option>
-                <option value="distance-asc">Distance Ascending</option>
-                <option value="distance-asc">Distance Descending</option>
+                <option value="&sort=full-name-asc">Ascending Name</option>
+                <option value="&sort=full-name-desc">Descending Name</option>
+                <option value="&sort=best-match-asc">Best Match Ascending</option>
+                <option value="&sort=best-match-asc">Best Match Descending</option>
+                <option value="&sort=rating-asc">Doctor's Rating Ascending</option>
+                <option value="&sort=rating-asc">Doctor's Rating Descending</option>
+                <option value="&sort=distance-asc">Distance Ascending</option>
+                <option value="&sort=distance-asc">Distance Descending</option>
               </select>
             </div>
           </div>
@@ -75,6 +75,9 @@
       <div class="doctorResult">
         <h3 id="ifSuccess"></h3>
       <div class="docList">
+        <ul id="docList">
+
+        </ul>
 
       </div>
       </div>
