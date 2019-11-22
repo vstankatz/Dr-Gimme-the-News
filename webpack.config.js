@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const {BugsnagBuildReporterPlugin} = require('webpack-bugsnag-plugins');
 
 module.exports = {
   entry: './src/main.js',
@@ -17,6 +18,10 @@ module.exports = {
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new Dotenv(),
+    new BugsnagBuildReporterPlugin({
+      apiKey: `${process.env.API_KEY}`,
+      appVersion: '1.4.2'
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Dr Gimme the News',
