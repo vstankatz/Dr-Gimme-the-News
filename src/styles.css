@@ -6,3 +6,7 @@ img.docPic {
 ul  {
     list-style-type: none;
 }
+
+.specList {
+  display: none;
+}

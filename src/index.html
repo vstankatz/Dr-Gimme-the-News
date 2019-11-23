@@ -1,85 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Dr Gimme The News</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="doctorSearch">
-        <form id="searchDoctor">
-          <div class="form-row">
-            <div class="form-group col-sm-6">
+<head>
+  <meta charset="utf-8">
+  <title>Dr Gimme The News</title>
+</head>
+<body>
+  <div class="container">
+    <div class="doctorSearch">
+      <form id="searchDoctor">
+        <div class="form-row">
+          <div class="form-group col-sm-6">
 
-              <label>Doctors Name</label>
-              <input type="text" id="docName">
-            </div>
-            <div class="form-group col-sm-6">
-              <label>Specialty</label>
-              <input type="text" id="docSpec">
+            <label>Doctors Name
               <br>
-              <label>Symptoms</label>
-              <input type="text" id="docHelp">
-            </div>
-          </div>
-          <div class="form-row allign-items-center">
-            <div class="form-group col-sm-4">
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary">Female
-                <input type="radio" name="gender" id="docSex" value="&gender=female">
-                </label>
-                <label class="btn btn-dark">Male
-                <input type="radio" name="gender" id="docSex" value="&gender=male">
-                </label>
-                <label class="btn btn-secondary">Either
-                <input type="radio" name="gender" id="docSex" value="" checked>
-                </label>
-              </div>
-            </div>
-            <div class="col-sm-2">
+            <input type="text" id="docName"></label>
 
-            </div>
-            <div class="form-group col-sm-6">
-              <label>How would you like to sort your results?</label>
-              <select class="form-control" id="docSort">
-                <option value="">    </option>
-                <option value="&sort=full-name-asc">Ascending Name</option>
-                <option value="&sort=full-name-desc">Descending Name</option>
-                <option value="&sort=best-match-asc">Best Match Ascending</option>
-                <option value="&sort=best-match-asc">Best Match Descending</option>
-                <option value="&sort=rating-asc">Doctor's Rating Ascending</option>
-                <option value="&sort=rating-asc">Doctor's Rating Descending</option>
-                <option value="&sort=distance-asc">Distance Ascending</option>
-                <option value="&sort=distance-asc">Distance Descending</option>
+            <label>Symptoms
+              <br>
+            <input type="text" id="docHelp"></label>
+            <br>
+
+          </div>
+          <div class="form-group col-sm-6">
+            <label>Category:</label>
+            <select id="docSpec">
+              <option value="">   </option>
+              <option value="medical">Medical</option>
+              <option value="vision">Vision</option>
+              <option value="dental">Dental</option>
+              <option value="services">Services</option>
+              <option value="therapy">Therapy</option>
+            </select>
+            <br>
+            <div class="specList">
+              <label>Specialty</label>
+              <select id="specList">
+
               </select>
-            </div>
-          </div>
-          <div class="form-row allign-items-center">
-            <div class="col-sm-4">
-
-            </div>
-            <div class="col-sm-4">
-              <button type="submit">Submit</button>
-
-            </div>
-            <div class="col-sm-4">
 
             </div>
 
           </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-6">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary">Female
+                <input type="radio" name="gender" id="docSex" value="&gender=female">
+              </label>
+              <label class="btn btn-dark">Male
+                <input type="radio" name="gender" id="docSex" value="&gender=male">
+              </label>
+              <label class="btn btn-secondary">Either
+                <input type="radio" name="gender" id="docSex" value="" checked>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group col-sm-6">
+            <label>Sort By</label>
+            <select class="form-control-sm" id="docSort">
+              <option value="">    </option>
+              <option value="&sort=full-name-asc">Ascending Name</option>
+              <option value="&sort=full-name-desc">Descending Name</option>
+              <option value="&sort=best-match-asc">Best Match &#8593;</option>
+              <option value="&sort=best-match-asc">Best Match &#8595;</option>
+              <option value="&sort=rating-asc">Doctor's Rating &#8593;</option>
+              <option value="&sort=rating-asc">Doctor's Rating &#8595;</option>
+              <option value="&sort=distance-asc">Distance &#8593;</option>
+              <option value="&sort=distance-asc">Distance &#8595;</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-4">
+            <button type="submit">Submit</button>
+
+          </div>
+          <div class="col-sm-4">
+
+          </div>
+
+        </div>
 
 
-        </form>
-      </div>
-      <div class="doctorResult">
-        <h3 id="ifSuccess"></h3>
+      </form>
+    </div>
+    <div class="doctorResult">
+      <h3 id="ifSuccess"></h3>
       <div class="docList">
         <ul id="docList">
 
         </ul>
 
       </div>
-      </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
