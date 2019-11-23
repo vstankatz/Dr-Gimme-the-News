@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const bugsnag = require('@bugsnag/js');
 const {BugsnagBuildReporterPlugin} = require('webpack-bugsnag-plugins');
 
 module.exports = {

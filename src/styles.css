@@ -10,3 +10,7 @@ ul  {
 .specList {
   display: none;
 }
+
+.doctorFail {
+  display: none;
+}

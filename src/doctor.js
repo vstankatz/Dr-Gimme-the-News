@@ -6,7 +6,8 @@ export class Specialist {
         let jsonifiedResponse = await response.json();
         return jsonifiedResponse;
     }catch(error) {
-      console.log("There was an error handling your request: " + error.message);
+
+      // console.log("There was an error handling your request: " + error.message);
     }
   }
 }

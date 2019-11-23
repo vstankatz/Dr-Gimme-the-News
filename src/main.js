@@ -11,8 +11,15 @@ function translateInput(input) {
   const splitInput = getComma.split(" ");
   const newOutput = splitInput.join("%20");
   return newOutput;
-};
+}
 
+function ifEmpty(input) {
+  let failOutput = $("#ifFail");
+  if (input == 0) {
+    $(".doctorFail").show();
+    failOutput.text("Sorry it looks like we were unable to find any providers in the area that met the search criteria. Please edit your search and try again.")
+  }
+}
 
 
 $(document).ready(function() {
@@ -79,7 +86,6 @@ $(document).ready(function() {
 } else {
   $(".specList").hide();
 
-  let newSpec = "";
 }
 
 })
@@ -111,8 +117,11 @@ $(document).ready(function() {
       const search = new QuerySearch(newName, newSpec, newHelp, newSex, newSort);
       let response = await search.findDoctor(newName, newSpec, newHelp, newSex, newSort);
 
+      ifEmpty(response.meta.count)
+
       console.log(newSpec);
       console.log(search);
+      console.log(response.meta.count);
       response.data.forEach(function(doctor) {
 
         htmlForDocInfo += "<hr> <li> <img class='docPic' src=" +  doctor.profile.image_url + " " + "'></li>" +
