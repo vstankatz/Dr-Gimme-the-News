@@ -45,15 +45,26 @@ $(document).ready(function() {
       let response = await search.findDoctor(newName, newSpec, newHelp, newSex, newSort);
 
       response.data.forEach(function(doctor) {
-
-        htmlForDocInfo += '<hr><li>' + "Doctor " + doctor.profile.first_name + " " + doctor.profile.middle_name + " " + doctor.profile.last_name + ", " + doctor.profile.title + "."
+        if (doctor.profile.middle_name === undefined) {
+          let middleName = "";
+        } else {
+          let middleName = doctor.profile.middle_name;
+        }
+        htmlForDocInfo += '<hr><li>' + "Doctor " + doctor.profile.first_name + " " + middleName + " " + doctor.profile.last_name + ", " + doctor.profile.title + "."
         docList.html(htmlForDocInfo);
+
         doctor.practices.forEach(function(location) {
 
           console.log(location.phones[0].number);
-          htmlForDocInfo += "<br>Address: " + location.visit_address.street + " " + location.visit_address.city + ", " + location.visit_address.state + " " + location.visit_address.zip +  "<br>Currently accepting new patients: " + location.accepts_new_patients + "<br>" + location.phones[0].type + " number: " + location.phones[0].number + ".</li><br>"
+          htmlForDocInfo += "<br>Address: " + location.visit_address.street + " " + location.visit_address.city + ", " + location.visit_address.state + " " + location.visit_address.zip +  "<br>Currently accepting new patients: " + location.accepts_new_patients + "<br>" + location.phones[0].type + " number: " + location.phones[0].number + ".<br>"
         })
-        // htmlForDocInfo +=
+
+        doctor.specialties.forEach(function(specialty) {
+          console.log(specialty.name);
+          htmlForDocInfo += "<br>Specialty: " +  specialty.name
+        })
+
+        htmlForDocInfo += "</li>"
 
       });
 
