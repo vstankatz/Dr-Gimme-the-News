@@ -15,6 +15,7 @@ function translateInput(input) {
 
 function ifEmpty(input) {
   let failOutput = $("#ifFail");
+  console.log(input);
   if (input == 0) {
     $(".doctorFail").show();
     failOutput.text("Sorry it looks like we were unable to find any providers in the area that met the search criteria. Please edit your search and try again.")
